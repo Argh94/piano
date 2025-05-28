@@ -1,0 +1,58 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#piano {
+    background-color: #cecece;
+    height: 290px;
+    padding: 90px 20px 0 20px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.keys {
+    background-color: #040404;
+    padding-left: 2px;
+    overflow: hidden;
+}
+
+.key {
+    background-color: #ffffff;
+    position: relative;
+    width: 20px;
+    height: 175px;
+    margin: 2px;
+    float: left;
+    border-radius: 0 0 3px 3px;
+}
+
+.key.black--key::after {
+    background-color: #1d1e22;
+    content: "";
+    position: absolute;
+    left: -13px;
+    width: 21px;
+    height: 100px;
+    border-radius: 0 0 3px 3px;
+}
+
+.key.active {
+    background-color: blue;
+}
+
+.key.black--key.active::after {
+    background-color: blue;
+}
